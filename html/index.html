@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml%22%3E
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <!-- TITLEBAR --> 
+    <title>City Research</title>
+
+    <link rel="shortcut icon" type="image" href="/img/logo.png">
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@1,500;1,700&display=swap" rel="stylesheet">
+
+    <script src="/js/data.js"></script>
+    <script src="/js/script.js"></script>
+
+</head>
+
+<body class = "header">
+    
+    <!-- HEADER -->
+    <h1> 
+        Which city are you looking for?   
+    </h1>
+
+    <!-- SEARCH BOX -->
+    <div class="wrapper">
+
+        <div class="searchBox">
+            <div class="dropdown">
+                <button class="dropbtn">Search by:</button>
+                <div class="dropdown-content">
+                  <a>City</a>
+                  <a>Nation</a>
+                  <a>Population</a>
+                  <a>Country Capitals</a>
+                  <a>Continent Capitals</a>
+                  <a></a>
+                </div>
+              </div>
+            <input type="text" class="searchText" id="search" placeholder="Search by Nation!">
+            <input type="number" class="searchNumber" id="search" placeholder="Search by Population!">
+        </div>
+  
+        <div class="counterBox">
+            <div class="displayCounter">
+                <h3>Results:</h3> 
+            </div>
+        </div>  
+    </div> 
+  
+    <!-- TABLE -->
+    <table class="content-table" id="content-table"></table>
+    
+    <script>
+        const searchInput = document.getElementById("search");
+
+        searchInput.addEventListener("keyup", function (event) 
+        {
+            const rows = document.querySelectorAll("tbody tr");
+            const q = event.target.value.toLowerCase();
+
+            rows.forEach((row) => 
+            {
+                const nationColumnContent = row.querySelector("#nation").textContent.toLowerCase();
+
+                row.style.display = nationColumnContent.startsWith(q)
+                ? "table-row" // Operatore ternario
+                : "none";
+            });
+        });
+
+        /*
+        function salutoClassico (nome) {
+            console.log("ciao " + nome);
+        }
+
+        const salutoModerno = (nome) => {
+            console.log("ciao " + nome);
+        }
+        */
+    </script>
+
+</body>
+</html>
