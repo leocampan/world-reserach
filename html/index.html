@@ -4,43 +4,48 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-    <!-- TITLEBAR --> 
-    <title>City Research</title>
-
+    <!-------------------------------- TITLEBAR START--------------------------------> 
     <link rel="shortcut icon" type="image" href="/img/logo.png">
-    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+    <title>World Research</title>
+    <!-------------------------------- TITLEBAR END-------------------------------->
 
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@1,500;1,700&display=swap" rel="stylesheet">
-
-    <script src="/js/data.js"></script>
+    <script src="/js/data.js"></script> 
     <script src="/js/script.js"></script>
-
 </head>
 
 <body class = "header">
-    
-    <!-- HEADER -->
-    <h1> 
-        Which city are you looking for?   
-    </h1>
+    <!-------------------------------- HEADER START-------------------------------->
+    <h1>What are you looking for?</h1>
+    <!-------------------------------- HEADER END-------------------------------->
 
-    <!-- SEARCH BOX -->
+    <!-------------------------------- SEARCH BOX START-------------------------------->
     <div class="wrapper">
-
+        <!-- Icona del mondo che ci manda alla mappa -->
+        <div class="map">
+            <button type="button" name="world-btn" style="border:none;">
+                <a href="/html/research.html">
+                    <img src="/img/logo.png">
+                </a> 
+            </button> 
+        </div>
+        <!-- Box della ricerca -->
         <div class="searchBox">
+            <!-- Bottone per la selezione del criterio di ricerca-->
             <div class="dropdown">
                 <button class="dropbtn">Search by:</button>
-                <div class="dropdown-content">
-                  <a>City</a>
-                  <a>Nation</a>
-                  <a>Population</a>
-                  <a>Country Capitals</a>
-                  <a>Continent Capitals</a>
-                  <a></a>
-                </div>
-              </div>
+                    <div class="dropdown-content">
+                        <a id="research-city">City</a>
+                        <a id="research-nation">Nation</a>
+                        <a id="research-population">Population</a>
+                        <a id="research-country-capitals">Country Capitals</a>
+                        <a id="research-continent-capitals">Continent Capitals</a>
+                        <a></a>
+                    </div>
+            </div>
             <input type="text" class="searchText" id="search" placeholder="Search by Nation!">
             <input type="number" class="searchNumber" id="search" placeholder="Search by Population!">
         </div>
@@ -51,6 +56,7 @@
             </div>
         </div>  
     </div> 
+    <!-------------------------------- SEARCH BOX START END-------------------------------->
   
     <!-- TABLE -->
     <table class="content-table" id="content-table"></table>
