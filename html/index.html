@@ -4,91 +4,103 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-    <!-------------------------------- TITLEBAR START--------------------------------> 
+    <!----------------------------------------| [title] |---------------------------------------->
     <link rel="shortcut icon" type="image" href="/img/logo.png">
     <title>World Research</title>
-    <!-------------------------------- TITLEBAR END-------------------------------->
-
+    
+    <!----------------------------------------| [links] |---------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/style.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@1,500;1,700&display=swap" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script src="/js/data.js"></script> 
     <script src="/js/script.js"></script>
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    
 </head>
 
-<body class = "header">
-    <!-------------------------------- HEADER START-------------------------------->
+<body class = "header" >
+    <!----------------------------------------| [header] |---------------------------------------->
     <h1>What are you looking for?</h1>
-    <!-------------------------------- HEADER END-------------------------------->
 
-    <!-------------------------------- SEARCH BOX START-------------------------------->
-    <div class="wrapper">
-        <!-- Icona del mondo che ci manda alla mappa -->
-        <div class="map">
-            <button type="button" name="world-btn" style="border:none;">
-                <a href="/html/research.html">
-                    <img src="/img/logo.png">
-                </a> 
-            </button> 
-        </div>
+    <!--
+    <select id="select1" width="20%" name="Scelta" onChange="ScegliMetodo(select1.selectedIndex)">
+        <option value="1">Ricerca Stato</option>
+        <option value="2">Ricerca Capitali</option>
+        <option value="3">Ricerca Pop > 4M</option>
+        <option value="4">Ricerca Città più popolate</option>
+    </select>
+
+    <hr />
+    <p id="Alert"></p>
+    <div class="osm-maps">
+        <center><iframe id="mappa" src="mappa_osm.htm" width="500" height="225" frameborder="0" style="border:0" scrolling="no"></iframe></center>
+    </div>  -->
+
+    <!----------------------------------------| [search box] |---------------------------------------->
+    <aside class="wrapper">
         <!-- Box della ricerca -->
         <div class="searchBox">
-            <!-- Bottone per la selezione del criterio di ricerca-->
+            <!-- wrapper dropdown -->
             <div class="dropdown">
-                <button class="dropbtn">Search by:</button>
+                <button class="dropbtn">Sort by:</button>
                     <div class="dropdown-content">
                         <a id="research-city">City</a>
                         <a id="research-nation">Nation</a>
                         <a id="research-population">Population</a>
                         <a id="research-country-capitals">Country Capitals</a>
                         <a id="research-continent-capitals">Continent Capitals</a>
-                        <a></a>
                     </div>
             </div>
-            <input type="text" class="searchText" id="search" placeholder="Search by Nation!">
-            <input type="number" class="searchNumber" id="search" placeholder="Search by Population!">
-        </div>
-  
-        <div class="counterBox">
-            <div class="displayCounter">
-                <h3>Results:</h3> 
-            </div>
+
+            <!-- input text -->
+            <input type="text" class="searchText" id="search">
+
+            <!-- counter-->
+            <section class="counter">
+                <p id="counter">Results:</p>
+                <p id="counterContent"></p>
+            </section>
+
+            <!-- table -->
+            <table class="content-table" id="content-table"></table>
+            
+            <script>
+                const searchInput = document.getElementById("search");
+
+                searchInput.addEventListener("keyup", function (event) 
+                {
+                    const rows = document.querySelectorAll("tbody tr");
+                    const q = event.target.value.toLowerCase();
+
+                    rows.forEach((row) => 
+                    {
+                        const nationColumnContent = row.querySelector("#nation").textContent.toLowerCase();
+
+                        row.style.display = nationColumnContent.startsWith(q)
+                        ? "table-row" // Operatore ternario
+                        : "none";
+                    });
+                });
+
+                /*
+                function salutoClassico (nome) {
+                    console.log("ciao " + nome);
+                }
+
+                const salutoModerno = (nome) => {
+                    console.log("ciao " + nome);
+                }
+                */
+            </script>
         </div>  
-    </div> 
-    <!-------------------------------- SEARCH BOX START END-------------------------------->
-  
-    <!-- TABLE -->
-    <table class="content-table" id="content-table"></table>
-    
-    <script>
-        const searchInput = document.getElementById("search");
-
-        searchInput.addEventListener("keyup", function (event) 
-        {
-            const rows = document.querySelectorAll("tbody tr");
-            const q = event.target.value.toLowerCase();
-
-            rows.forEach((row) => 
-            {
-                const nationColumnContent = row.querySelector("#nation").textContent.toLowerCase();
-
-                row.style.display = nationColumnContent.startsWith(q)
-                ? "table-row" // Operatore ternario
-                : "none";
-            });
-        });
-
-        /*
-        function salutoClassico (nome) {
-            console.log("ciao " + nome);
-        }
-
-        const salutoModerno = (nome) => {
-            console.log("ciao " + nome);
-        }
-        */
-    </script>
-
+    </aside> 
 </body>
 </html>
