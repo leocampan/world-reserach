@@ -1,39 +1,6 @@
 window.onload = function(){displayTable()};
 
-
-/*
-function displayTable() 
-{
-    s = "<thead>"
-        + "<tr>"
-        + "<th>" + "NATION" + "</th>" 
-        + "<th>" + "CITY" + "</th>" 
-        + "<th>" + "POPULATION" + "</th>" 
-        + "<th>" + "LATITUDE" + "</th>" 
-        + "<th>" + "LONGITUDE" + "</th>"
-        +  "</tr>"
-        + "</thead>"  
-        + "<tbody>"
-
-    for (var i in DB) 
-    {
-        des = DB[i].SOV0NAME.toUpperCase();
-
-        s += "<tr>"
-        s += '<td class = "nation" id="nation">' + DB[i].SOV0NAME + "</td>"
-        s += '<td class = "city">' + DB[i].NAMEASCII + "</td>"
-        s += '<td class = "population">' + DB[i].POP_MAX +"</td>"
-        s += '<td class = "latitude">' + DB[i].LATITUDE +"</td>"
-        s += '<td class = "longitude">' + DB[i].LONGITUDE +"</td>"
-        s += '</tr>'  
-    }
-
-    s += "</tbody>"
-    s += "</table>"
-    document.getElementById("content-table").innerHTML = s;
-}
-*/
-
+/* creazione tabella generale */
 function displayTable() 
 {
     s = "<thead>"
@@ -58,6 +25,8 @@ function displayTable()
     s += "</table>"
     document.getElementById("content-table").innerHTML = s;
 }
+
+
 
 function countRows() {
     var totalRows = 0;
@@ -204,5 +173,36 @@ function init() {
     });
 });
 
+/*
+function displayTable() 
+{
+    s = "<thead>"
+        + "<tr>"
+        + "<th>" + "NATION" + "</th>" 
+        + "<th>" + "CITY" + "</th>" 
+        + "<th>" + "POPULATION" + "</th>" 
+        + "<th>" + "LATITUDE" + "</th>" 
+        + "<th>" + "LONGITUDE" + "</th>"
+        +  "</tr>"
+        + "</thead>"  
+        + "<tbody>"
 
+    for (var i in DB) 
+    {
+        des = DB[i].SOV0NAME.toUpperCase();
+
+        s += "<tr>"
+        s += '<td class = "nation" id="nation">' + DB[i].SOV0NAME + "</td>"
+        s += '<td class = "city">' + DB[i].NAMEASCII + "</td>"
+        s += '<td class = "population">' + DB[i].POP_MAX +"</td>"
+        s += '<td class = "latitude">' + DB[i].LATITUDE +"</td>"
+        s += '<td class = "longitude">' + DB[i].LONGITUDE +"</td>"
+        s += '</tr>'  
+    }
+
+    s += "</tbody>"
+    s += "</table>"
+    document.getElementById("content-table").innerHTML = s;
+}
+*/
 

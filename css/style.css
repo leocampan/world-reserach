@@ -1,9 +1,21 @@
-/****************************************| [page] |****************************************/
 body {
+  margin: 0;
   background-color: rgb(00, 00, 255);
 }
+.row, .col { overflow: hidden; position: absolute; }
+.row { left: 0; right: 0; }
+.col { top: 0; bottom: 0; }
+.scroll-x { overflow-x: auto; }
 
-/****************************************| [header] |****************************************/
+.scroll-y { 
+  overflow-y: auto; 
+  width: fit-content;
+  background-color: red;
+}
+
+.header.row { height: 150px; top: 0; }
+.body.row { top: 150px; bottom: 10px; }
+
 h1 {
   font-size: 2.5em;
   text-align: center;
@@ -15,14 +27,14 @@ h1 {
   margin: 0px;
 }
 
-/****************************************| [research container] |****************************************/
-/* main box */
 .wrapper {
   margin-top: 10px;
   display: flex;
   justify-content: left;
   align-items: center;
   width: 36%;
+  display:table;
+
 }
 
 .searchBox {
@@ -33,12 +45,11 @@ h1 {
     border-radius: 10px;
     display: flex;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    
+
 }
 
-/* dropdown button */
 .dropbtn {
-  background-color: transparent;
+ background-color: rgb(0, 127, 255);
   color: white;
   font-size: 16px;
   border: none;
@@ -51,13 +62,11 @@ h1 {
   min-width: max-content;
 }
 
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -68,7 +77,6 @@ h1 {
   border-radius: 10px;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -76,24 +84,20 @@ h1 {
   display: block;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-content a:hover {
   background-color: rgb(0, 127, 255);
   color: white;
 }
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
   border-radius: 10px;
 }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
   background-color: rgb(0, 0, 255);
 }
 
-/* input text bar */
 .searchBox .searchText {
   text-align: justify;
   font-family: 'Varela Round', sans-serif;
@@ -110,36 +114,15 @@ h1 {
   margin-top: 2.5px;
 }
 
-/* counter */
-.counter h3 {
-  color: #ffffff;
-  font-family: 'Varela Round', sans-serif;
-  margin-left: 15px;
-  font-size: 0.8em;
-  padding-left: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  padding: 10px;
-}
 
-/**************************************** TABLE START ****************************************/
 .content-table {
     font-family: 'Varela Round', sans-serif;
     border-collapse:collapse;
     margin: 25px ;
     font-size: 0.8em;
-    min-width: 400px;
     border-radius: 10px 10px 0 0;
-    overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    margin-left: 0;
     border-color: rgb(0, 0, 255);
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 255);
-    margin-top: 70px;
-    width: 50%;
-    float: left;
-    margin-left: -380px;
   }
   
   .content-table thead th {
@@ -166,13 +149,11 @@ h1 {
     background: rgb(0, 127, 255);
     color: white;
   }
-/**************************************** TABLE END ****************************************/
 
 
 
 
 
-/**************************************** Iframe Responsive ****************************************/
 
 .osm-maps {
   position: relative;
@@ -188,7 +169,7 @@ h1 {
   height: 100%;
   }
 
-  /**************************************** Select ****************************************/
+
 
   select
   {
@@ -204,7 +185,7 @@ h1 {
       padding: 12px 20px 12px 40px;
   }
 
-  /* ------------------- INPUTBOX ------------------------ */
+
 
   input[type=text] {
       width: 20%;
@@ -226,7 +207,7 @@ h1 {
       }
 
 
-  /* -------------------- Alert Box --------------------- */
+
 
   .alert {
       padding: 20px;
@@ -250,3 +231,7 @@ h1 {
       }
 
       body{font-family:Arial;font-size:20px;}
+
+
+ 
+
