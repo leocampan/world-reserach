@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: rgb(00, 00, 255);
+  background-color: rgb(34, 113, 179);
 }
 .row, .col { overflow: hidden; position: absolute; }
 .row { left: 0; right: 0; }
@@ -9,8 +9,8 @@ body {
 
 .scroll-y { 
   overflow-y: auto; 
-  width: fit-content;
-  background-color: red;
+  width: 27%;
+  background-color:rgb(34, 113, 179);
 }
 
 .header.row { height: 150px; top: 0; }
@@ -20,7 +20,7 @@ h1 {
   font-size: 2.5em;
   text-align: center;
   font-family: 'Fredoka One', cursive;
-  background-color: rgb(00, 00, 255);
+  background-color: rgb(34, 113, 179);
   color: #ffffff;   
   width: 100%;
   height: 65px;
@@ -44,22 +44,36 @@ h1 {
     margin-left: 0px;
     border-radius: 10px;
     display: flex;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 
 }
 
-.dropbtn {
- background-color: rgb(0, 127, 255);
+.dropdown p {
   color: white;
-  font-size: 16px;
+  background-color: rgb(0, 127, 255);
+  position: relative;
+  padding: 5px;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 0.8em;
+  width: fit-content;
+  border-top: 5px;
+ 
+}
+
+.dropbtn {
+  background-color: rgb(0, 127, 255);
+  color: white;
+  font-size: 0.8em;
   border: none;
   border-radius: 10px;
-  margin-right: 15px;
+  margin-right: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   font-family: 'Varela Round', sans-serif;
   font-size: 0.8em;
   padding: 10px;
   min-width: max-content;
+  margin-left: 20px;
+  margin-top: 10px;
 }
 
 .dropdown {
@@ -105,7 +119,7 @@ h1 {
   background: #fff;
   padding: 18px;
   color: #000;
-  width: 200px;
+  max-width: 200px;
   height: 5px;
   border-radius: 10px;
   font-size: 0.8em;
@@ -120,9 +134,12 @@ h1 {
     border-collapse:collapse;
     margin: 25px ;
     font-size: 0.8em;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     border-color: rgb(0, 0, 255);
+    min-width: 40%;
+    max-width: 40%;
+
   }
   
   .content-table thead th {
@@ -130,6 +147,8 @@ h1 {
     color: #ffffff;
     text-align: left;
     font-weight: bold;
+    border-radius: 10px 10px 0px 0px;
+    border-collapse: collapse;
   }
   
   .content-table th,
@@ -232,6 +251,23 @@ h1 {
 
       body{font-family:Arial;font-size:20px;}
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: white;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: blue;
+  border-radius: 10px;
+}
 
  
 
