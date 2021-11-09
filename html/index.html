@@ -35,14 +35,15 @@
 
         <div class="searchBox">
             <div class="dropdown">
-                <p id="sort text">Sort by: </p>
+                <p id="sort text">Sort by:
                 <select class="dropbtn">
-                    <option value="city">Cities</option>
-                    <option value="nation">Nations</option>
-                    <option value="population">Population</option>
-                    <option value="countryCapitals">Capitals</option>
-                    <option value="continent">Continents</option>
+                    <option value="city" onclick= tableNationCity()>Cities</option>
+                    <option value="nation" onclick = tableContinentNation()>Nations</option>
+                    <option value="population" onclick="tableCityPopulation()">Population</option>
+                    <option value="countryCapitals" onclick="table">Capitals</option>
+                    <option value="continent" onclick="tableContinets()">Continents</option>
                 </select>
+                </p>
             </div>
 
             <!-- input text -->
@@ -55,6 +56,7 @@
             </section>
         </div>
     </div>
+
 
     <div class="body row scroll-y">
         <table class="content-table" id="content-table"></table>
@@ -76,6 +78,10 @@
             });
         </script>
     </div>
+
+    <!-- <div class="osm-maps">
+        <iframe id="mappa" src="mappa_osm.htm" width="500" height="225" frameborder="0" style="border:0" scrolling="no"></iframe>
+    </div> -->
 </body>
 
 </html>

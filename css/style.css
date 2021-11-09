@@ -1,26 +1,31 @@
 body {
   margin: 0;
-  background-color: rgb(34, 113, 179);
+  background-color: rgb(0, 0, 255);
 }
 .row, .col { overflow: hidden; position: absolute; }
+
 .row { left: 0; right: 0; }
+
 .col { top: 0; bottom: 0; }
+
 .scroll-x { overflow-x: auto; }
 
 .scroll-y { 
   overflow-y: auto; 
   width: 27%;
-  background-color:rgb(34, 113, 179);
+  background-color:blue;
+  width: min-content;
 }
 
 .header.row { height: 150px; top: 0; }
+
 .body.row { top: 150px; bottom: 10px; }
 
 h1 {
   font-size: 2.5em;
   text-align: center;
   font-family: 'Fredoka One', cursive;
-  background-color: rgb(34, 113, 179);
+  background-color: blue;
   color: #ffffff;   
   width: 100%;
   height: 65px;
@@ -38,38 +43,38 @@ h1 {
 }
 
 .searchBox {
-    background: rgb(0, 127, 255);
+    background: rgb(0, 0, 255);
     position: relative;
-    padding: 15px;
+    padding: 5px;
     margin-left: 0px;
-    border-radius: 10px;
     display: flex;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-
+    
 }
 
 .dropdown p {
   color: white;
-  background-color: rgb(0, 127, 255);
+  background-color: rgb(0, 0, 255);
   position: relative;
   padding: 5px;
   font-family: 'Varela Round', sans-serif;
-  font-size: 0.8em;
+  font-size: 1em;
   width: fit-content;
   border-top: 5px;
- 
+  text-align: center;
+  margin-top: 5px;
 }
 
 .dropbtn {
   background-color: rgb(0, 127, 255);
   color: white;
-  font-size: 0.8em;
+  font-size: 1em;
   border: none;
   border-radius: 10px;
   margin-right: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   font-family: 'Varela Round', sans-serif;
-  font-size: 0.8em;
+  font-size: 1em;
   padding: 10px;
   min-width: max-content;
   margin-left: 20px;
@@ -122,34 +127,31 @@ h1 {
   max-width: 200px;
   height: 5px;
   border-radius: 10px;
-  font-size: 0.8em;
+  font-size: 1em;
   border-color: rgb(0, 0, 255);
-  margin-left: 17px;
-  margin-top: 2.5px;
+  margin-top: 13px;
 }
 
-
 .content-table {
-    font-family: 'Varela Round', sans-serif;
-    border-collapse:collapse;
-    margin: 25px ;
-    font-size: 0.8em;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    border-color: rgb(0, 0, 255);
-    min-width: 40%;
-    max-width: 40%;
-
-  }
+  font-family: 'Varela Round', sans-serif;
+  border-collapse:collapse;
+  margin: 25px ;
+  font-size: 0.8em;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border-color: rgb(0, 0, 255);
+  min-width: 30%;
+  max-width: 30%;
+  margin-top: 5px;
+}
   
-  .content-table thead th {
-    background-color: rgb(0, 0, 255);
-    color: #ffffff;
-    text-align: left;
-    font-weight: bold;
-    border-radius: 10px 10px 0px 0px;
-    border-collapse: collapse;
-  }
+.content-table thead th {
+  background-color: rgb(0, 0, 255);
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+  border-collapse: collapse;
+}
   
   .content-table th,
   .content-table td {
@@ -162,6 +164,7 @@ h1 {
   
   tr:nth-child(odd) {
     background: #fff;
+    
   }
 
   tr:nth-child(even) {
@@ -169,10 +172,21 @@ h1 {
     color: white;
   }
 
+.counter {
+  background-color: rgb(0, 127, 255);
+  color: white;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1em;
+  border-radius: 10px 10px 10px 10px;
+  width: fit-content;
+  height: 30px;
+  position: relative;
+  padding: 5px;
+  font-family: 'Varela Round', sans-serif;
+  text-align: center;
+  margin-top: 18px;
 
-
-
-
+}
 
 .osm-maps {
   position: relative;
@@ -180,10 +194,11 @@ h1 {
   height: 0;
   overflow: hidden;
   }
-      .osm-maps iframe {
+
+  .osm-maps iframe {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 20%;
+  left: 50%;
   width: 100%;
   height: 100%;
   }
