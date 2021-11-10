@@ -1,7 +1,7 @@
 var DB= 
     {
-    "CenterMap_Lat": 0,
-    "CenterMap_Lon": 0,
+    "CenterMap_Lat": 41.89595563,
+    "CenterMap_Lon": 12.48325842,
     "ZoomLevel": 3,
     "Punti":
     [
@@ -11039,8 +11039,7 @@ var DB=
     "LATITUDE":"35.67078005",
     "LONGITUDE":"-80.4744784",
     "POP_MAX":41352,
-    "GEONAM
-EID":4489985,
+    "GEONAMEID":4489985,
     "ADMIN1_COD":0,
     "GN_POP":26462,
     "GTOPO30":222,
@@ -22147,8 +22146,7 @@ EID":4489985,
     "TIMEZONE":"America/Sao_Paulo"
   },
   {
-    "
-FEATURECLA":"Populated place",
+    "FEATURECLA":"Populated place",
     "NAME":"Barbacena",
     "NAMEASCII":"Barbacena",
     "SOV0NAME":"Brazil",
@@ -44205,8 +44203,7 @@ FEATURECLA":"Populated place",
     "SOV_A3":"RUS",
     "LATITUDE":"58.05018923",
     "LONGITUDE":"60.54978186",
-    "POP_
-MAX":48992,
+    "POP_MAX":48992,
     "GEONAMEID":1487277,
     "ADMIN1_COD":71,
     "GN_POP":48992,
@@ -66642,8 +66639,7 @@ MAX":48992,
     "FEATURECLA":"Populated place",
     "NAME":"Fernandopolis",
     "NAMEASCII":"Fernandopolis",
-    "SOV0NAME":"Brazil"
-,
+    "SOV0NAME":"Brazil",
     "SOV_A3":"BRA",
     "LATITUDE":"-20.2696297",
     "LONGITUDE":"-50.26004358",
@@ -77818,8 +77814,7 @@ MAX":48992,
     "FEATURECLA":"Populated place",
     "NAME":"Foshan",
     "NAMEASCII":"Foshan",
-    "SOV0NAME":"Ch
-ina",
+    "SOV0NAME":"China",
     "SOV_A3":"CHN",
     "LATITUDE":"23.03005292",
     "LONGITUDE":"113.1200097",
@@ -88946,8 +88941,7 @@ ina",
     "TIMEZONE":"America/Santiago"
   },
   {
-    "FE
-ATURECLA":"Populated place",
+    "FEATURECLA":"Populated place",
     "NAME":"Ancud",
     "NAMEASCII":"Ancud",
     "SOV0NAME":"Chile",
@@ -100054,8 +100048,7 @@ ATURECLA":"Populated place",
     "SOV_A3":"CAN",
     "LATITUDE":"56.23332338",
     "LONGITUDE":"-117.2832911",
-    "POP_MAX":
-5340,
+    "POP_MAX":5340,
     "GEONAMEID":6100069,
     "ADMIN1_COD":1,
     "GN_POP":5340,
@@ -109105,7 +109098,7 @@ ATURECLA":"Populated place",
     "ADMIN1_COD":0,
     "GN_POP":35452,
     "GTOPO30":183,
-    "TIMEZONE":"America/New_York"
+    "TIMEZONE":"Europe/Rome"
   },
   {
     "FEATURECLA":"Admin-0 capital",
@@ -110157,5 +110150,5 @@ ATURECLA":"Populated place",
     "GTOPO30":0,
     "TIMEZONE":"Pacific/Auckland"
   }
-]
-        }
+    ]
+    }

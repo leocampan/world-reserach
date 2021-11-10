@@ -1,8 +1,4 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml%22%3E">
-
-</html>
-
 <head>
     <meta http-equiv=" Content-Type" content="text/html; charset=utf-8" />
 
@@ -26,7 +22,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
@@ -36,52 +31,34 @@
         <div class="searchBox">
             <div class="dropdown">
                 <p id="sort text">Sort by:
-                <select class="dropbtn">
-                    <option value="city" onclick= tableNationCity()>Cities</option>
-                    <option value="nation" onclick = tableContinentNation()>Nations</option>
-                    <option value="population" onclick="tableCityPopulation()">Population</option>
-                    <option value="countryCapitals" onclick="table">Capitals</option>
-                    <option value="continent" onclick="tableContinets()">Continents</option>
-                </select>
+                    <select class="dropbtn" id="dropbtn">
+                        <option value="city">Nation</option>
+                        <option value="population">Population > 4M</option>
+                        <option value="capitals">Capitals</option>
+                        <option value="continent">More populated city</option>
+                    </select>
                 </p>
             </div>
 
             <!-- input text -->
-            <input type="text" class="searchText" id="search">
+            <input type="text" class="searchText" id="search" value="" onkeyup=valore(search.value,dropbtn.value)>
 
             <!-- counter-->
             <section class="counter">
-                <p id="counter">Results:</p>
-                <p id="content"></p>
+                <p id="counter"></p>
             </section>
         </div>
     </div>
 
-
+<div>
     <div class="body row scroll-y">
         <table class="content-table" id="content-table"></table>
-
-        <script>
-            const searchInput = document.getElementById("search");
-
-            searchInput.addEventListener("keyup", function (event) {
-                const rows = document.querySelectorAll("tbody tr");
-                const q = event.target.value.toLowerCase();
-
-                rows.forEach((row) => {
-                    const nationColumnContent = row.querySelector("#nation").textContent.toLowerCase();
-
-                    row.style.display = nationColumnContent.startsWith(q)
-                        ? "table-row" // Operatore ternario
-                        : "none";
-                });
-            });
-        </script>
     </div>
 
-    <!-- <div class="osm-maps">
-        <iframe id="mappa" src="mappa_osm.htm" width="500" height="225" frameborder="0" style="border:0" scrolling="no"></iframe>
-    </div> -->
+    <div class="osm-maps">
+        <iframe id="mappa" src="mappa_osm.htm" width="570" height="600" frameborder="0" style="border:0" scrolling="no"></iframe>
+    </div>
+</div>
 </body>
 
 </html>

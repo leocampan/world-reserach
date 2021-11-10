@@ -2,7 +2,7 @@
 <body onload="init()">
    
     <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
-    <script type="text/javascript" src="dati.js"></script>
+    <script type="text/javascript" src="/js/data.js"></script>
     <script>
      function init() {
      // Definisco la variabilie mappa come un oggetto OpenLayers.Map utilizzando il DivMappa, poi aggiungo il Layer OSM (Open Street Map)
@@ -45,7 +45,7 @@
           );
       // Aggiungo al layer dei marker un marker (utilizzando l'oggetto lonLat per le coordinate)
       marker = new OpenLayers.Marker(LonLat);
-      marker.icon.url="./ico/default.png";
+      marker.icon.url="/ico/default.png";
       LayerMarkers.addMarker(marker);
       //LayerMarkers.addMarker(new OpenLayers.Marker(LonLat));
       } // fine for
